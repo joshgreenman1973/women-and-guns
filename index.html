@@ -89,10 +89,13 @@
     content: ''; position: absolute; inset: 0;
     background: radial-gradient(ellipse at 50% 40%, rgba(221,228,76,0.04) 0%, transparent 60%);
   }
-  .hero-logo {
+  .hero-wordmark {
     margin-bottom: 40px; opacity: 0; animation: fadeUp 1s 0.1s forwards;
+    font-family: var(--font-primary); font-weight: 700;
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(255,255,255,0.92);
   }
-  .hero-logo img { height: 20px; filter: invert(1); }
+  .hero-wordmark .dot { color: var(--vc-orange); margin: 0 0.4em; }
   .hero-label {
     font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
     color: var(--vc-orange); margin-bottom: 24px; opacity: 0;
@@ -354,7 +357,12 @@
     font-size: 13px; font-weight: 500;
   }
   footer a { color: var(--vc-black); font-weight: 700; }
-  footer img { height: 18px; margin-bottom: 16px; }
+  .footer-wordmark {
+    font-family: var(--font-primary); font-weight: 700;
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--vc-black); margin-bottom: 16px; display: inline-block;
+  }
+  .footer-wordmark .dot { color: var(--vc-orange); margin: 0 0.4em; }
 </style>
 </head>
 <body>
@@ -377,7 +385,7 @@
 
 <!-- ════════════════════════════════════════ HERO ════════════════════════════════════════ -->
 <div class="hero">
-  <div class="hero-logo"><img src="assets/vc-logo-black.png" alt="Vital City"></div>
+  <div class="hero-wordmark">Vital<span class="dot">·</span>City</div>
   <div class="hero-label">A Data Story</div>
   <h1>Women & <span>Guns</span> in America</h1>
   <p class="hero-sub">
@@ -1019,7 +1027,7 @@
 </section>
 
 <footer>
-  <img src="assets/vc-logo-black.png" alt="Vital City"><br>
+  <div class="footer-wordmark">Vital<span class="dot">·</span>City</div><br>
   Data compiled March 2026 from peer-reviewed research, federal agencies, and nonpartisan research organizations.<br>
   All statistics are linked to their original sources above.
 </footer>
